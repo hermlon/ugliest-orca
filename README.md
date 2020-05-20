@@ -32,3 +32,6 @@ def costas_array(p, g):
     for i in range(p):
         print(hex(g**i % p))
 ```
+## glorious youtube comments about the value of such music for society
+![Screenshot of youtube comments](screenshots/youtube-comments.png)
+(found [here](https://www.youtube.com/watch?v=RaoRNMmpa_s))
