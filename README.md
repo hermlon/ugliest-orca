@@ -23,3 +23,12 @@ This music is obviously only pattern free in its `p` notes, after which the sequ
 Speaking of generation: All this script really does is multiplying the previously calculated number with `g` and taking it modulo `p`, repeating this over and over. Because Orca removed the previously included modulo operator, I implemented it using the increment operator which allows to pass a modulo, but results in this confusing script (which accidentally looks like a kangaroo).
 
 I'm pretty sure this script is far from optimal and the task can be solved more cleanly and with less code, nevertheless this was a fun experiment to find out what could be done with Orca.
+
+## Checking the results of the script
+There is a quick Python script included in the repository to check whether the Orca script works as expected (hex is sufficient base36 emulation because p can't be larger than 13 to be handled by the script, see the first paragraph):
+
+```python
+def costas_array(p, g):
+    for i in range(p):
+        print(hex(g**i % p))
+```
