@@ -7,7 +7,7 @@ This is a script written in [Orca](https://100r.co/site/orca.html) generating "p
 
 https://www.youtube.com/watch?v=j8i9HM5rOF0
 
-## Explanaition
+## Explanation
 Due to the limitations of the Orca language, having base 36 one digit numbers only, the maximum order of Costas array which can be generated using this script is `p = 13` using the primitive root `g = 2`, since the largest possible remainder (`16`) of the next larger prime `p = 17` multiplied with its lowest primitive root `g = 3` would cause the multiplication operator to overflow (`16 * 3 = 48 > 36`).
 
 Have a look at the following table copied from [Wikipedia](https://en.wikipedia.org/wiki/Primitive_root_modulo_n) for possible primes and their primitive roots:
@@ -36,6 +36,6 @@ def costas_array(p, g):
     for i in range(p):
         print(hex(g**i % p))
 ```
-## glorious youtube comments showing the cultural impact this kind of music has
+### glorious youtube comments showing the cultural impact this kind of music has
 ![Screenshot of youtube comments](screenshots/youtube-comments.png)
 (found [here](https://www.youtube.com/watch?v=RaoRNMmpa_s))
